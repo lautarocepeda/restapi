@@ -28,7 +28,7 @@ return [
         ],
         // directory uploads
         "upload_directory" => [
-            'dir' => '../profilePictures/'
+            'dir' => '../src/profilePictures/'
         ]
     ],
 ];

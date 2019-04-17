@@ -26,8 +26,6 @@ require __DIR__ . '/../src/middleware.php';
 // Register routes
 require __DIR__ . '/../src/routes.php';
 
-// Tokens Controllerds
-require __DIR__ . '/../src/tokensController.php';
 
 $app->options('/{routes:.+}', function ($request, $response, $args) {
     return $response;
