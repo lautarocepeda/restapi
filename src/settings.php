@@ -24,7 +24,7 @@ return [
         ],
         // jwt settings
         "jwt" => [
-            'secret' => '3d524a53c110e4c22463b10ed32cef9d'
+            'secret' => ''
         ],
         // directory uploads
         "upload_directory" => [
