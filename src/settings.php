@@ -20,7 +20,7 @@ return [
             "host" => '127.0.0.1',
             "dbname" => 'restapi-slim',
             "user" => 'root',
-            "pass" => ''
+            "pass" => '21c9cadf'
         ],
         // jwt settings
         "jwt" => [
@@ -28,7 +28,8 @@ return [
         ],
         // directory uploads
         "upload_directory" => [
-            'dir' => '../src/profilePictures/'
+            'users' => '../src/users/',
+            'benefits' => '../public/benefits/'
         ]
     ],
 ];
