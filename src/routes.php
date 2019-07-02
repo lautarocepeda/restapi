@@ -84,8 +84,8 @@ $app->post('/fb_signin', function (Request $request, Response $response) use ($a
 
     // initialize facebook sdk
     $fb = new Facebook\Facebook([
-        'app_id' => '403483487119955',
-        'app_secret' => '4c4e208d812d4e81e1cd0d15d46cf065',
+        'app_id' => '',
+        'app_secret' => '',
         'default_graph_version' => 'v2.2',
     ]);
 
