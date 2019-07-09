@@ -325,8 +325,6 @@ $app->group('/api', function(\Slim\App $app) {
 
 
 
-
-
     /* Update User Profile */
     $app->put('/profile/update', function(Request $request, Response $respose) use ($app) {
 
@@ -486,15 +484,14 @@ $app->group('/api', function(\Slim\App $app) {
 
 
         try {
-            $sql = "INSERT INTO benefit (title, description, expiration, price) 
-                    VALUES (:title, :description, :expiration, :price)";
+            $sql = "INSERT INTO benefit (title, description, price) 
+                    VALUES (:title, :description, :price)";
 
             $sth = $this->db->prepare($sql);
 
 
             $sth->bindParam('title', $clientData['title']);
             $sth->bindParam('description', $clientData['description']);
-            $sth->bindParam('expiration', $clientData['expiration']);
             $sth->bindParam('price', $clientData['price']);
 
             $sth->execute();
@@ -583,6 +580,106 @@ $app->group('/api', function(\Slim\App $app) {
     });
 
 
+    $app->get('/benefit/verify', function(Request $request, Response $response) use ($app) {
+
+        $userId = $request->getAttribute('decoded_token_data')['id'];
+        $codeBenefit = trim($request->getParam("code"));
+
+        $fechaActual =  strtotime(date("Y-m-d"));
+
+
+        try{
+            $sql = "SELECT role FROM users WHERE id = :id";
+
+            $sth = $this->db->prepare($sql);
+
+            $sth->bindParam('id', $userId);
+
+            $sth->execute();
+
+            $user_role = $sth->fetch()['role'];
+
+            //verify role
+            if ($user_role === 'Admin') {
+                $sql = "SELECT benefit_id, expiration, code FROM users_benefit WHERE code = :codeBenefit";
+
+                $sth = $this->db->prepare($sql);
+
+                $sth->bindParam('codeBenefit', $codeBenefit);
+
+                $sth->execute();
+                $benefit = $sth->fetch();
+
+                $benefitExpirate = strtotime($benefit['expiration']);
+
+
+                if ($benefit) {
+                    //validate expiration date
+                    if ($fechaActual > $benefitExpirate) {
+                        throw new Exception('El beneficio ya caduco...');
+                    } else {
+                        return $response->withJson($benefit, 200);
+                    }
+
+                } else {
+                    throw new Exception('No existe beneficios asociado a ese codigo.');
+                }
+
+
+            } else {
+                throw new Exception('No tienes permisos para realizar esta acción.', 401);
+            }
+
+
+        } catch(Exception $e) {
+            return $this->response->withJson([
+                'error' => true,
+                'status' => $e->getCode(),
+                'message' => $e->getMessage()
+            ], 400);
+        }
+
+    });
+
+
+    $app->get('/benefit/{id}', function (Request $request, Response $response) {
+
+        $route = $request->getAttribute('route');
+        $benefitId = $route->getArgument('id');
+
+
+        try {
+            $sql = "SELECT * from benefit WHERE id = :id";
+
+            $sth = $this->db->prepare($sql);
+
+            $sth->bindParam('id', $benefitId);
+
+            $sth->execute();
+
+            $benefit = $sth->fetch();
+
+            if ($benefit) {
+
+                return $response->withJson($benefit, 200);
+
+            } else {
+                throw new PDOException('No existe beneficio con ese identificador.');
+            }
+
+
+        } catch(PDOException $e) {
+            return $this->response->withJson([
+                'error' => true,
+                'status' => $e->getCode(),
+                'message' => $e->getMessage()
+            ], 400);
+        }
+
+    });
+
+
+
     /* Get Users Coupons */
     $app->get('/coupons', function(Request $request, Response $response) use ($app) {
 
@@ -591,7 +688,7 @@ $app->group('/api', function(\Slim\App $app) {
 
 
         try{
-            $sql = "SELECT * FROM users_benefit WHERE user_id = :id";
+            $sql = "SELECT * FROM users_benefit WHERE user_id = :id ORDER BY id DESC";
 
             $sth = $this->db->prepare($sql);
 
@@ -623,16 +720,6 @@ $app->group('/api', function(\Slim\App $app) {
         }
 
     });
-
-
-
-    /* exchange terminado, ahora faltaria agregar a la base de datos de exchange_benefits
-     * los benefijos canjeados para usar exchange_benefits como tabla para verificar los
-     * codigos y saber que beneficio es, en caso de ser un empleado. luego en el front
-     * hacer funcionar los botones "Canjear" y de la parte de administracion realizar
-     * el panel para verificar un beneficio y fecha de caducidad de los mismos.
-    */
-
 
 
     /* Exchange a benefit */
@@ -688,39 +775,6 @@ $app->group('/api', function(\Slim\App $app) {
             ], 400);
         }
     });
-
-
-
-    /* Return QR In Base */
-    $app->get('/qr', function(Request $request, Response $response) use ($app) {
-
-        $container = $app->getContainer();
-        $generateQr = $container['generateQr'];
-
-
-        $data = $request->getParsedBody();
-
-        $data = [
-            'title' => 'Imagine'
-        ];
-
-        $response->write(base64_encode($generateQr($data)));
-        return $response->withHeader('Content-type', 'application/octet-stream');
-
-    });
-
-
-
-    $app->get('/imgProfile', function(Request $request, Response $response) {
-
-        $imgProfile = file_get_contents('../src/profilePictures/18/profilePicture.jpg');
-
-        $data = base64_encode($imgProfile);
-
-        return $response->write($data);
-    });
-
-
 
 
 });
