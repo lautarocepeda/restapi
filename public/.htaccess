@@ -2,9 +2,6 @@
   RewriteEngine On
 
 
-  RewriteRule ^$ sv-benefits.herokuapp.com/     [L]
-  RewriteRule (.*) sv-benefits.herokuapp.com/$1 [L]
-
   # Some hosts may require you to use the `RewriteBase` directive.
   # Determine the RewriteBase automatically and set it as environment variable.
   # If you are using Apache aliases to do mass virtual hosting or installed the
@@ -13,8 +10,8 @@
   # work in environments without path prefix as well, providing a safe, one-size
   # fits all solution. But as you do not need it in this case, you can comment
   # the following 2 lines to eliminate the overhead.
-  RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
-  RewriteRule ^(.*) - [E=BASE:%1]
+  RewriteCond %{REQUEST_URI} !^public
+  RewriteRule ^(.*)$ public/$1 [L]
   
   # If the above doesn't work you might need to set the `RewriteBase` directive manually, it should be the
   # absolute physical path to the directory that contains this htaccess file.
