@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a554f693-f2da-42a0-abad-c98c970b4cc9" name="Default Changelist" comment="Update Commit: SignIn, SignUp, Profile, Update Profile, UploadImg, ValidateToken,">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a554f693-f2da-42a0-abad-c98c970b4cc9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/tuupola/slim-jwt-auth/src/JwtAuthentication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+            <state relative-caret-position="272">
+              <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -211,41 +209,6 @@
               <item name="restapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="restapi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restapi" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restapi" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tuupola" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restapi" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tuupola" type="462c0819:PsiDirectoryNode" />
-              <item name="slim-jwt-auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restapi" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tuupola" type="462c0819:PsiDirectoryNode" />
-              <item name="slim-jwt-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restapi" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tuupola" type="462c0819:PsiDirectoryNode" />
-              <item name="slim-jwt-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JwtAuthentication" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -388,7 +351,7 @@
       <workItem from="1561762581870" duration="912000" />
       <workItem from="1562007758004" duration="6416000" />
       <workItem from="1562309909542" duration="3283000" />
-      <workItem from="1562655150483" duration="20227000" />
+      <workItem from="1562655150483" duration="20285000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit: SignIn, SignUp and UploadImg">
       <created>1554672921176</created>
@@ -509,11 +472,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562701752805</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update Commit: SignIn, SignUp, Profile, Update Profile, UploadImg, ValidateToken,">
+      <created>1562703761399</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1562703761399</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393982000" />
+    <option name="totallyTimeSpent" value="394040000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,9 +496,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.76464325" visible="true" weight="0.1664888" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.76464325" visible="true" weight="0.1664888" />
       <window_info id="Favorites" order="1" sideWeight="0.23535676" side_tool="true" weight="0.14834578" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290735" />
@@ -539,7 +508,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.1638796" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32867885" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4994664" visible="true" weight="0.3254565" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.4994664" visible="true" weight="0.3254565" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.3265306" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.4994664" weight="0.3034557" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.23003195" />
@@ -718,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dependencies.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -758,10 +720,17 @@
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/tuupola/slim-jwt-auth/src/JwtAuthentication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+        <state relative-caret-position="272">
+          <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
         </state>
       </provider>
     </entry>
