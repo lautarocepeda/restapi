@@ -17,10 +17,11 @@ return [
         ],
         // database connection details
         "db" => [
-            "host" => '127.0.0.1',
-            "dbname" => 'restapi-slim',
-            "user" => 'root',
-            "pass" => '21c9cadf'
+            "host" => 'ec2-174-129-209-212.compute-1.amazonaws.com',
+            "dbname" => 'd6r16lib2pq33',
+            "user" => 'xxntdscidsllmp',
+            "pass" => 'b6f619f63260b9e504c9d8a565c43c9e69838a151d56521805a5154a48dd556a',
+            "port" => "5432"
         ],
         // jwt settings
         "jwt" => [
