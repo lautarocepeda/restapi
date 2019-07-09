@@ -4,6 +4,11 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use \Firebase\JWT\JWT;
 
+
+$app->post('/test', function(Request $request, Response $response) {
+   $response->write("Hello World");
+});
+
 // Public Routes
 $app->post('/auth/signin', function (Request $request, Response $response, array $args) use ($app) {
 
