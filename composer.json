@@ -34,8 +34,7 @@
     },
     "scripts": {
         "start": "php -S localhost:8080 -t public",
-        "test": "phpunit",
-        "post-install-cmd": "chmod -R 777 public/"
+        "test": "phpunit"
     }
 
 }
