@@ -17,14 +17,14 @@ return [
         ],
         // database connection details
         "db" => [
-            "host" => 'remotemysql.com',
-            "dbname" => 'IatlTMfsOD',
-            "user" => 'IatlTMfsOD',
-            "pass" => 'RnIWASYoQ4',
+            "host" => 'localhost',
+            "dbname" => 'dbname',
+            "user" => 'root',
+            "pass" => '',
         ],
         // jwt settings
         "jwt" => [
-            'secret' => '3d524a53c110e4c22463b10ed32cef9d'
+            'secret' => '{secret-code}'
         ],
         // directory uploads
         "upload_directory" => [
