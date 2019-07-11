@@ -34,7 +34,11 @@
     },
     "scripts": {
         "start": "php -S localhost:8080 -t public",
-        "test": "phpunit"
+        "test": "phpunit",
+        "compile": [
+            "chmod -R 777 public/benefits",
+            "chmod -R 777 public/users"
+        ]
     }
 
 }
