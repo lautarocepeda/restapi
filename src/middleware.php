@@ -7,7 +7,7 @@ $app->add(new \Tuupola\Middleware\JwtAuthentication([
     "attribute" => "decoded_token_data",
     "secret" => "{secret code}",
     "algorithm" => ["HS256"],
-    //"secure" => false,
+    "secure" => false,
     "error" => function ($response, $arguments) {
         $data["status"] = "error";
         $data["message"] = $arguments["message"];
