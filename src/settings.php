@@ -28,7 +28,7 @@ return [
         ],
         // directory uploads
         "upload_directory" => [
-            'users' => '../src/users/',
+            'users' => '../public/users/',
             'benefits' => '../public/benefits/'
         ]
     ],
