@@ -1,7 +1,7 @@
 <?php
 return [
     'settings' => [
-        'displayErrorDetails' => true, // set to false in production
+        'displayErrorDetails' => false, // set to false in production
         'addContentLengthHeader' => false, // Allow the web server to send the content-length header
 
         // Renderer settings
@@ -17,10 +17,10 @@ return [
         ],
         // database connection details
         "db" => [
-            "host" => '127.0.0.1',
-            "dbname" => 'restapi-slim',
-            "user" => 'root',
-            "pass" => '21c9cadf',
+            "host" => 'remotemysql.com',
+            "dbname" => 'IatlTMfsOD',
+            "user" => 'IatlTMfsOD',
+            "pass" => 'RnIWASYoQ4',
         ],
         // jwt settings
         "jwt" => [
@@ -28,7 +28,7 @@ return [
         ],
         // directory uploads
         "upload_directory" => [
-            'users' => '../public/users/',
+            'users' => '../src/users/',
             'benefits' => '../public/benefits/'
         ]
     ],
