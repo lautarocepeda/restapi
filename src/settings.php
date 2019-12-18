@@ -18,9 +18,9 @@ return [
         // database connection details
         "db" => [
             "host" => 'remotemysql.com',
-            "dbname" => 'IatlTMfsOD',
-            "user" => 'IatlTMfsOD',
-            "pass" => 'RnIWASYoQ4',
+            "dbname" => '8irFI45Dz8',
+            "user" => '8irFI45Dz8',
+            "pass" => 'LYClP4cBAO',
         ],
         // jwt settings
         "jwt" => [
